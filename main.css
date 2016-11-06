@@ -1,9 +1,41 @@
 .container {
+	
+	width: 100vw;
+	height: 100vh;
+}
+
+#about {
+	background-color: #009688;
+}
+
+#projects {
+	background-color:rgba(0,0,0,0);
+}
+
+#skills {
 	background-color:rgba(0,0,0,0.15);
-	border-radius: 10px;
-	margin-bottom: 50px;
-	margin-top: 50px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	max-width: 1000px;
+}
+
+#console {
+	background-color:rgba(1,0,0,0);
+	width: 50vw;
+	height: 70vh;
+	margin-top: 20vh;
+	margin-bottom: 10vh;
+	margin-left: 25vw;
+	margin-right: 25vw;
+}
+
+#console-bar {
+	background-color: #cecece;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	height: 2vh;
+}
+
+#console-body {
+	background-color:rgba(1,1,1,1);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	height: 67vh;
 }
