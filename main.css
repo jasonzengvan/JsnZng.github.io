@@ -5,7 +5,7 @@
 }
 
 #about {
-	background-color: #009688;
+	background-color: #795548;
 }
 
 #projects {
@@ -34,8 +34,22 @@
 }
 
 #console-body {
-	background-color:rgba(1,1,1,1);
+	background-color: #000000;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	height: 67vh;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 2vw;
+	padding-bottom: 2vw;
+}
+
+#console-content {
+	width: 46vw;
+	height: 61vh;
+	font-family:  'Monaco', 'Courier New';
+}
+
+.console-display {
+	color: #cecece;
 }
