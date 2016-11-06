@@ -9,7 +9,7 @@
 }
 
 #projects {
-	background-color:rgba(0,0,0,0);
+	background-color: #E0E0E0;
 }
 
 #skills {
@@ -20,10 +20,12 @@
 	background-color:rgba(1,0,0,0);
 	width: 50vw;
 	height: 70vh;
+	min-width: 600px;
+	min-height: 400px;
+	margin: 0 auto;
 	margin-top: 20vh;
 	margin-bottom: 10vh;
-	margin-left: 25vw;
-	margin-right: 25vw;
+	
 }
 
 #console-bar {
@@ -42,14 +44,25 @@
 	padding-bottom: 3vh;
 	padding-left: 2vw;
 	padding-bottom: 2vw;
+	min-width: 600px;
+	min-height: 400px;
 }
 
 #console-content {
 	width: 46vw;
 	height: 61vh;
+	min-width: 600px;
+	min-height: 400px;
 	font-family:  'Monaco', 'Courier New';
 }
 
 .console-display {
 	color: #cecece;
+}
+
+#project {
+	background-color: #ffffff;
+	height: 40vh;
+	width: 100%;
+	margin-top: 50px;
 }
