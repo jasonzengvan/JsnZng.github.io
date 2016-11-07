@@ -8,12 +8,12 @@
 	background-color: #795548;
 }
 
-#projects {
-	background-color: #E0E0E0;
+#resume {
+	background-color:rgba(0,0,0,0.15);
 }
 
-#skills {
-	background-color:rgba(0,0,0,0.15);
+#projects {
+	background-color: #E0E0E0;
 }
 
 #console {
@@ -58,9 +58,14 @@
 
 .project {
 	background-color: #ffffff;
-	height: 40vh;
-	width: 30vh;
+	height: 400px;
+	width: 300px;
 	margin: 0 auto;
-	margin-top: 3vh;
-	margin-bottom: 3vh; 
+	margin-top: 30px;
+	margin-bottom: 30px; 
+}
+
+.project-description {
+    font-family: 'Monaco', 'Courier New';
+	margin: 20px;
 }
