@@ -1,7 +1,7 @@
 .container {
 	
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 }
 
 #about {
@@ -52,17 +52,15 @@
 	color: #cecece;
 }
 
-.projects-row1 {
-	margin-top: 60px;
-}
-
-.projects-row2 {
-	margin-top: 10px;
+.spacing-row {
+	height: 8vh;
 }
 
 .project {
 	background-color: #ffffff;
 	height: 40vh;
-	width: 100%;
-	margin-top: 20px;
+	width: 30vh;
+	margin: 0 auto;
+	margin-top: 3vh;
+	margin-bottom: 3vh; 
 }
