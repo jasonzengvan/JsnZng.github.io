@@ -1,3 +1,24 @@
+.navbar {
+	min-height: 55px;
+	font-family: 'Karla', sans-serif;
+	font-size: 20px;
+}
+
+.navbar-collapse {
+	float: right;
+}
+
+.navbar-default .navbar-brand {
+	font-family: 'Karla', sans-serif;
+	font-size: 25px;
+	color: #444444;
+}
+
+.navbar .nav > li > a {
+    color:  #444444;
+}
+
+
 .container {
 	
 	width: 100vw;
@@ -56,16 +77,38 @@
 	height: 8vh;
 }
 
+#projects-container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
 .project {
 	background-color: #ffffff;
-	height: 400px;
-	width: 300px;
+	height: 500px;
+	width: 400px;
 	margin: 0 auto;
-	margin-top: 30px;
-	margin-bottom: 30px; 
+	margin-top: 50px;
+	margin-bottom: 50px; 
+}
+
+.project-img {
+	cursor: pointer;
+	cursor: hand;
 }
 
 .project-description {
-    font-family: 'Monaco', 'Courier New';
+    font-family: 'Karla', sans-serif;
 	margin: 20px;
+}
+
+.modal-name {
+	padding-top: 20px;
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+}
+
+.modal-description {
+	padding-top: 40px;
+	font-family: 'Karla', sans-serif;
+	font-size: 15px;
 }
