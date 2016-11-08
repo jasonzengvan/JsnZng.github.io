@@ -73,11 +73,12 @@
 	color: #cecece;
 }
 
-.resume-section {
+#resume-inner {
 	height: auto;
 	max-width: 700px;
 	margin: 0 auto;
 	margin-top: 40px;
+	margin-bottom: 80px;
 	font-family: 'Karla', sans-serif;
 	font-size: 16px;
 }
@@ -97,17 +98,21 @@
 }
 
 #projects-container {
-	max-width: 1000px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 
 .project {
 	background-color: #ffffff;
-	height: 500px;
-	max-width: 400px;
+	height: 400px;
+	max-width: 320px;
 	margin: 0 auto;
-	margin-top: 50px;
-	margin-bottom: 50px; 
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.close {
+	font-size: 30px;
 }
 
 .project-img {
@@ -120,14 +125,11 @@
 	margin: 20px;
 }
 
-.modal-name {
-	padding-top: 20px;
+.modal-body {
 	font-family: 'Karla', sans-serif;
-	text-align: center;
 }
 
-.modal-description {
-	padding-top: 40px;
+.modal-body > h1, i {
 	font-family: 'Karla', sans-serif;
-	font-size: 15px;
+	text-align: center;
 }
