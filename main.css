@@ -112,7 +112,9 @@
 }
 
 .close {
-	font-size: 30px;
+	font-size: 35px;
+	margin-right: 50px;
+	margin-top: 30px;
 }
 
 .project-img {
@@ -126,6 +128,7 @@
 }
 
 .modal-body {
+	padding: 50px;
 	font-family: 'Karla', sans-serif;
 }
 

@@ -9,9 +9,9 @@
 
     <!-- Bootstrap -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,10 +38,10 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#resume">RÉSUMÉ</a></li>
+            <li><a href="#resume">RESUME</a></li>
             <li><a href="#projects">PROJECTS</a></li>
           </ul>
         </div>
@@ -70,6 +70,9 @@
                   <br>
                   Jason.interests <br>
                   &nbsp => ["Math", "Programming", "Soccer", "Tech", "Food", "Gaming"] <br>
+                  <br>
+                  Jason.github <br>
+                  &nbsp => "<a target="_blank" href="https://github.com/jsnzng">github.com/jsnzng</a>" <br>
                   <br>
                   Jason.email <br>
                   &nbsp => "<a target="_blank" href="mailto:jasonzeng@alumni.ubc.ca">jasonzeng@alumni.ubc.ca</a>" <br>
@@ -185,6 +188,7 @@
       <div class="spacing-row"></div>
       <div id="projects-container">
           <div class="row">
+            <!-- Project 1 -->
             <div class="col-md-6">
               <div class="project">
                 <img src="img/sudoku.png" class="img-responsive project-img" href="#project-modal-1" data-toggle="modal">
@@ -196,6 +200,7 @@
                 </div>
               </div>
             </div>
+            <!-- Project 2 -->
             <div class="col-md-6">
               <div class="project">
                 <img src="img/vanpark.png" class="img-responsive project-img" href="#project-modal-2" data-toggle="modal">
@@ -209,6 +214,7 @@
             </div>
           </div>
           <div class="row">
+            <!-- Project 3 -->
             <div class="col-md-6">
               <div class="project">
                 <img src="img/c8_15puzzle.png" class="img-responsive project-img" href="#project-modal-3" data-toggle="modal">
@@ -220,6 +226,7 @@
                 </div>
               </div>
             </div>
+            <!-- Project 4 -->
             <div class="col-md-6">
               <div class="project">
                 <img src="img/portfolio.png" class="img-responsive project-img" href="#project-modal-4" data-toggle="modal">
@@ -252,29 +259,33 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           
           <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
             <h1>Sudoku</h1>
             <br>
-            <img src="img/sudoku_start.png" class="img-responsive">
+            <!-- <img src="img/sudoku_start.png" class="img-responsive">
             <p class="caption">Randomly Generated Puzzle</p>
-            <br>
+            <br> -->
             <img src="img/sudoku_solved.png" class="img-responsive">
             <p class="caption">Solved Puzzle</p>
             <br>
             <p>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-              <br>
-              <br>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-              <br>
-              <br>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
+              Sudoku is a web game written in HTML and JavaScript, and styled by CSS. All algorithms are written in JavaScript.<br>
+              <ul>
+                <li>
+                  Random puzzle generation is achieved by randomly swapping rows and columns of a default board in a way that preserve the validity of the board, and then cleaning some cells to make the board a puzzle.
+                </li>
+                <li>
+                  Puzzle solving algorithm is simply depth-first search since it is NP-complete meaning that there is no very effective algorithm. An alternative is Dancing Links algorithm by Donald Knuth.
+                </li>
+              </ul> 
+              Play the game here! -> <a href="https://jsnzng.github.io/sudoku">Sudoku</a> 
             </p>
           </div>
+          
         </div>
       </div>
     </div>
@@ -283,10 +294,13 @@
     <div class="modal fade" id="project-modal-2" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
           <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            
             <h1>VanParks</h1>
             <br>
             <img src="img/vanpark_login.png" class="img-responsive">
@@ -296,13 +310,14 @@
             <p class="caption">Map View</p>
             <br>
             <p>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
+              Vancouver Parks is a course project done by a group of four. The web application is written in JavaScript/Typescript using Node.js as the framework. The server uses Mongodb as the database to manage user information and data of parks in Vancouver. On the map, there are clickable markers that show the park locations. Users may also search parks by facilities and add parks to their footprint lists. <br>
               <br>
-              <br>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-              <br>
-              <br>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
+              My main responsibilities:
+              <ul>
+                <li>Mongodb integration</li>
+                <li>User information management, including signup, login, logout functionalities</li>
+                <li>Park searching functionality</li>
+              </ul>
             </p>
           </div>
         </div>
@@ -313,10 +328,10 @@
     <div class="modal fade" id="project-modal-3" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
             <h1>Chip-8 Emulator</h1>
             <br>
             <img src="img/c8_hidden.png" class="img-responsive">
@@ -326,13 +341,16 @@
             <p class="caption">Game Blinky</p>
             <br>
             <p>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-              <br>
-              <br>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-              <br>
-              <br>
-              Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
+              This emulator is written in C++ and executable on Mac only for now. But it might be easy to support windows or linux since there are only a couple of platform-specific implementations. <br>
+              <ul>
+                <li>
+                  The implementation of the virtual machine, including memory and CPU cycle, are based on <a href="https://en.wikipedia.org/wiki/CHIP-8">Chip-8 Wikipidia</a>
+                </li>
+                <li>
+                  Graphic display is achieve by OpenGL with FPS hardcored to around 60
+                </li>
+              </ul>
+              Fork or clone it from my GitHub! <a href="https://github.com/JsnZng/chip8">JsnZng/Chip-8</a>
             </p>
           </div>
         </div>
@@ -343,24 +361,21 @@
     <div class="modal fade" id="project-modal-4" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-name">
-              <h1>Project 4</h1>
-          </div>
-          <div class="modal-body">
-            <div class="modal-img">
-              <img src="img/jason.png" class="img-responsive">
-            </div>
-            <div class="modal-description">
-              <p>
-                Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-                <br>
-                <br>
-                Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-                <br>
-                <br>
-                Specific, Measurable (or at least evaluable) achievement, Achievable (recently Agreed to or Acceptable are used regularly as well), Realistic (given the current state of organizational resources) and Time terminated (bounded). The evaluation (measurement) occurs at the project closure. However a continuous guard on the project progress should be kept by monitoring and evaluating. It is also worth noting that SMART is best applied for incremental type innovation projects
-              </p>
-            </div>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="modal-body">            
+            <h1>Chip-8 Emulator</h1>
+            <br>
+            <img src="img/jz.png" class="img-responsive">
+            <p class="caption">About Section</p>
+            <br>
+            <p>
+              This is the website you are stepping on! <br>
+              It is built from scratch. Bootstrap is used for the layout and responsive modals and to make it mobile-friendly.
+            </p>
           </div>
         </div>
       </div>
