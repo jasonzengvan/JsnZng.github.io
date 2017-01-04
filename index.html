@@ -191,7 +191,9 @@
             <!-- Project 1 -->
             <div class="col-md-6">
               <div class="project">
-                <img src="img/sudoku.png" class="img-responsive project-img" href="#project-modal-1" data-toggle="modal">
+                <a href="https://jsnzng.github.io/sudoku">
+                  <img src="img/sudoku.png" class="img-responsive project-img">
+                </a>
                 <div class="project-description">
                   <p>
                     <b>Sudoku</b>
@@ -254,42 +256,6 @@
       </p>
     </div>
 
-    <!-- Modal for project 1 -->
-    <div class="modal fade" id="project-modal-1" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
-          
-          
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h1>Sudoku</h1>
-            <br>
-            <!-- <img src="img/sudoku_start.png" class="img-responsive">
-            <p class="caption">Randomly Generated Puzzle</p>
-            <br> -->
-            <img src="img/sudoku_solved.png" class="img-responsive">
-            <p class="caption">Solved Puzzle</p>
-            <br>
-            <p>
-              Sudoku is a web game written in HTML and JavaScript, and styled by CSS. All algorithms are written in JavaScript.<br>
-              <ul>
-                <li>
-                  Random puzzle generation is achieved by randomly swapping rows and columns of a default board in a way that preserve the validity of the board, and then cleaning some cells to make the board a puzzle.
-                </li>
-                <li>
-                  Puzzle solving algorithm is simply depth-first search since it is NP-complete meaning that there is no very effective algorithm. An alternative is Dancing Links algorithm by Donald Knuth.
-                </li>
-              </ul> 
-              Play the game here! -> <a href="https://jsnzng.github.io/sudoku">Sudoku</a> 
-            </p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
 
     <!-- Modal for project 2 -->
     <div class="modal fade" id="project-modal-2" tabindex="-1" role="dialog">
@@ -339,13 +305,13 @@
             <p class="caption">Game Blinky</p>
             <br>
             <p>
-              This emulator is written in C++ and executable on Mac only for now. But it might be easy to support windows or linux since there are only a couple of platform-specific implementations. <br>
+              This emulator is written in C++ and executable on Mac only for now. But it should be easy to support windows or linux since there are only a couple of platform-specific implementations. <br>
               <ul>
                 <li>
                   The implementation of the virtual machine, including memory and CPU cycle, are based on <a href="https://en.wikipedia.org/wiki/CHIP-8">Chip-8 Wikipidia</a>
                 </li>
                 <li>
-                  Graphic display is achieve by OpenGL with FPS hardcored to around 60
+                  OpenGL is used for graphic display
                 </li>
               </ul>
               Fork or clone it from my GitHub! <a href="https://github.com/JsnZng/chip8">JsnZng/Chip-8</a>
