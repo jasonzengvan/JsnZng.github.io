@@ -1,34 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="jz" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <title>Jason Zeng</title>
 
-    <!-- Bootstrap -->
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <!-- Font -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jz.css">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-  <body>
+  <body ng-controller="JZController as jz">
 
     <!-- Navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="container-fluid content">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -37,19 +27,18 @@
           <a class="navbar-brand" href="#">Jason Zeng</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse navbar-right" id="nav">
           <ul class="nav navbar-nav">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#resume">RESUME</a></li>
+            <li><a href="" ng-click="jz.setTab('ABOUT')">ABOUT</a></li>
+            <li><a href="" ng-click="jz.setTab('PROJECT')">PROJECT</a></li>
+            <li><a href="" ng-click="jz.setTab('RESUME')">RESUME</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- About -->
-    <div id="about" class="container">
+    <div ng-show="jz.tab === 'ABOUT'" id="about" class="container">
       <div class="row">
         <div class="col-md-3"></div>
         <div  class="col-md-6">
@@ -60,22 +49,22 @@
               <div id="console-content">
                 <p class="console-display">
                   Jason.name <br>
-                  &nbsp => "Jason Zeng" <br>
+                  &nbsp; => "Jason Zeng" <br>
                   <br>
                   Jason.eduation <br>
-                  &nbsp => "University of British Columbia" <br>
+                  &nbsp; => "University of British Columbia" <br>
                   <br>
                   Jason.major <br>
-                  &nbsp => "Computer Science and Mathematics" <br>
+                  &nbsp; => "Computer Science and Mathematics" <br>
                   <br>
                   Jason.interests <br>
-                  &nbsp => ["Math", "Programming", "Soccer", "Tech", "Food", "Gaming"] <br>
+                  &nbsp; => ["Math", "Programming", "Soccer", "Tech", "Food", "Gaming"] <br>
                   <br>
                   Jason.github <br>
-                  &nbsp => "<a target="_blank" href="https://github.com/jsnzng">github.com/jsnzng</a>" <br>
+                  &nbsp; => "<a target="_blank" href="https://github.com/jsnzng">github.com/jsnzng</a>" <br>
                   <br>
                   Jason.email <br>
-                  &nbsp => "<a target="_blank" href="mailto:jasonzeng@alumni.ubc.ca">jasonzeng@alumni.ubc.ca</a>" <br>
+                  &nbsp; => "<a target="_blank" href="mailto:jasonzeng@alumni.ubc.ca">jasonzeng@alumni.ubc.ca</a>" <br>
                   <br>
                 </p>
               </div>
@@ -88,267 +77,50 @@
 
 
    <!-- Projects -->
-    <div  id="projects" class="container">
-      <div class="spacing-row"></div>
-      <div id="projects-container">
-          <div class="row">
-            <!-- Project 1 -->
-            <div class="col-md-6">
-              <div class="project">
-                <a href="https://jsnzng.github.io/sudoku">
-                  <img src="img/sudoku.png" class="img-responsive project-img">
-                </a>
-                <div class="project-description">
-                  <p>
-                    <b>Sudoku</b>
-                    - a classic sudoku puzzle built with javascript and html
-                  </p>
-                </div>
-              </div>
+    <div  ng-show="jz.tab === 'PROJECT'" id="projects">
+
+      <div class="content row">
+        <div ng-repeat="project in jz.projects" class="col-md-4">
+          <div class="project">
+
+            <div class="project-img-container">
+              <img ng-src="img/{{project.img}}.png" class="img-responsive project-img">              
+              <div class="project-links">
+                <span><a ng-hide="project.git === ''" ng-href="{{project.git}}"><span class="fa fa-github"></span></a> &nbsp; <a ng-hide="project.url === ''" ng-href="{{project.url}}"><span class="fa fa-external-link"></span></a></span>
+              </div>  
             </div>
-            <!-- Project 2 -->
-            <div class="col-md-6">
-              <div class="project">
-                <img src="img/vanpark.png" class="img-responsive project-img" href="#project-modal-2" data-toggle="modal">
-                <div class="project-description">
-                  <p>
-                    <b>VanParks</b>
-                    - a Yelp-like app built with the MEAN stack for parks look-up in Vancouver
-                  </p>
-                </div>
-              </div>
+
+
+            <div class="project-description">
+              <p>
+                <b>{{project.name}}</b>
+                - {{project.caption}}
+              </p>
             </div>
+
           </div>
-          <div class="row">
-            <!-- Project 3 -->
-            <div class="col-md-6">
-              <div class="project">
-                <img src="img/c8_15puzzle.png" class="img-responsive project-img" href="#project-modal-3" data-toggle="modal">
-                <div class="project-description">
-                  <p>
-                    <b>Chip-8</b>
-                    - a Chip-8 emulator written in C++
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="col-md-6">
-              <div class="project">
-                <a href="https://jsnzng.github.io/weathers">
-                  <img src="img/weathers.png" class="img-responsive project-img">
-                </a>
-                <div class="project-description">
-                  <p>
-                    <b>Weathers</b>
-                    - a real time weather application that forecasts the weather at your location  
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>       
         </div>
+
+      </div>
     </div>
 
 
     <!-- Resume -->
-    <div id="resume" class="container">
-      <div class="spacing-row"></div>
-      <div id="resume-inner">
-        <!-- Eduacation -->
-        <p class="tag"><b> EDUACATION <br><br></b></p>
-        <p>
-          <br>
-          <b>University of British Columbia</b>
-          <span class="right">
-            <i>2012 - 2016</i>
-          </span>
-          <br>
-          <b>Computer Science and Math, B.Sc.</b>
-          <span class="right">
-            <i>
-              Vancouver, BC
-            </i>
-          </span>
-
-          <br>
-          <br>
-          Relavent C.S. Coursework:
-          <ul>
-            <li>Data Structures and Algorithms</li>
-            <li>Software Engineering</li>
-            <li>Internet Computing</li>
-            <li>Theory of Computing</li>
-            <li>Computational Optimization</li>
-            <li>Computer Hardware and Operatin Systems</li>
-          </ul>
-          <br>
-          Relavent Math Coursework:
-          <ul>
-            <li>Calculus I, II, III, IV</li>
-            <li>Number Theory</li>
-            <li>Group Theory</li>
-            <li>Real Variables I, II</li>
-            <li>Complex Variables</li>
-            <li>Probability</li>
-          </ul>
-          <br>
-          <br>
-        </p>
-        <!-- Work -->
-        <p class="tag"><b> WORK <br><br></b></p>
-        <!-- Work 1 -->
-        <p>
-          <br>
-          <b>University of British Columbia</b>
-          <span class="right">
-            <i>Sept. - Dec. 2016</i>
-          </span>
-          <br>
-          <b>Undergrad Teaching Assistant</b>
-          <span class="right">
-            <i>
-              Vancouver, BC
-            </i>
-          </span>
-          <br>
-          <br>
-          TAing CPSC221, Basic Algorithms and Data Structures
-          <ul>
-            <li>Guiding 3 lab sections of roughly 30 students each though lab exercises, most of which are C++ programming of data structures and algorithms</li>
-            <li>Holding Weekly office hours and helping students with assignments and lecture materials</li>
-            <li>Marking Assignments, Projects and Exams</li>
-          </ul>
-        </p>
-        <!-- Work 2 -->
-        <p>
-          <br>
-          <br>
-          <b>University of British Columbia</b>
-          <span class="right">
-            <i>May - June 2016</i>
-          </span>
-          <br>
-          <b>Undergrad Teaching Assistant</b>
-          <span class="right">
-            <i>
-              Vancouver, BC
-            </i>
-          </span>
-          <br>
-          <br>
-          TAing CPSC221, Basic Algorithms and Data Structures
-          <ul>
-            <li>Guiding 2 lab sections though lab exercises and helping them with various problems that they encounter</li>
-            <li>Invigilating exams</li>
-            <li>Marking Assignments, Projects and Exams</li>
-          </ul>
-        </p>
-
-      </div>
+    <div ng-show="jz.tab === 'RESUME'" id="resume">
+      <h1>Résumé</h1>
+      <a href="img/cv.pdf">
+        <img id="resume-img" src="img/cv.png">
+      </a>
     </div>
 
     <!-- Footer -->
-    <div id="footer">
-      <p>
-        <br>
-        <br>
-        Copyright @ 2016 Jason Zeng 
-        <br>
-        <br>
-      </p>
-    </div>
+    <footer>
+        &copy; 2016 Jason Zeng 
+    </footer>
 
-
-    <!-- Modal for project 2 -->
-    <div class="modal fade" id="project-modal-2" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h1>VanParks</h1>
-            <br>
-            <img src="img/vanpark_login.png" class="img-responsive">
-            <p class="caption">Log-In Page</p>
-            <br>
-            <img src="img/vanpark_map.png" class="img-responsive">
-            <p class="caption">Map View</p>
-            <br>
-            <p>
-              Vancouver Parks is a course project done by a group of four. The web application is written in JavaScript/Typescript using Node.js as the framework. The server uses Mongodb as the database to manage user information and data of parks in Vancouver. On the map, there are clickable markers that show the park locations. Users may also search parks by facilities and add parks to their footprint lists. <br>
-              <br>
-              My main responsibilities:
-              <ul>
-                <li>Mongodb integration</li>
-                <li>User information management, including signup, login, logout functionalities</li>
-                <li>Park searching functionality</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal for project 3 -->
-    <div class="modal fade" id="project-modal-3" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h1>Chip-8 Emulator</h1>
-            <br>
-            <img src="img/c8_hidden.png" class="img-responsive">
-            <p class="caption">Game Hidden</p>
-            <br>
-            <img src="img/c8_blinky.png" class="img-responsive">
-            <p class="caption">Game Blinky</p>
-            <br>
-            <p>
-              This emulator is written in C++ and executable on Mac only for now. But it should be easy to support windows or linux since there are only a couple of platform-specific implementations. <br>
-              <ul>
-                <li>
-                  The implementation of the virtual machine, including memory and CPU cycle, are based on <a href="https://en.wikipedia.org/wiki/CHIP-8">Chip-8 Wikipidia</a>
-                </li>
-                <li>
-                  OpenGL is used for graphic display
-                </li>
-              </ul>
-              Fork or clone it from my GitHub! <a href="https://github.com/JsnZng/chip8">JsnZng/Chip-8</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal for project 4 -->
- <!--    <div class="modal fade" id="project-modal-4" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body"> 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>           
-            <h1>Jason Zeng</h1>
-            <br>
-            <img src="img/jz.png" class="img-responsive">
-            <p class="caption">About Section</p>
-            <br>
-            <p>
-              This is the website you are stepping on! <br>
-              It is built from scratch. Bootstrap is used for the layout and responsive modals and to make it mobile-friendly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/jz.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
