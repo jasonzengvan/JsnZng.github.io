@@ -4,6 +4,12 @@ angular
 	this.tab = "ABOUT";
 
 	this.projects = [{
+		name: "GA Drawer",
+		caption: "an program to approximate images with Genetic Algorithm in Python",
+		img: "gadrawer",
+		url: "",
+		git: "https://github.com/jsnzng/gadrawer"
+	},{
 		name: "Game of Life",
 		caption: "an Angular app to play Conway's Game of Life",
 		img: "life",
