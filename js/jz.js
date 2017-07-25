@@ -19,7 +19,7 @@ angular
 		name: "Sudoku",
 		caption: "a classic Sudoku game with efficient algorithms",
 		img: "sudoku",
-		url: "https://jsnzng.github.io/sudoku",
+		url: "https://jsudoku.herokuapp.com",
 		git: "https://github.com/jsnzng/sudoku"
 	}, {
 		name: "Chip-8",
